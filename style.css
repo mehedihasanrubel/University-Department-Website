@@ -1,0 +1,226 @@
+/* ==========================================
+   General Styles
+========================================== */
+
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding-top: 70px; /* navbar height */
+  background-color: #f8f9fa;
+}
+
+
+
+a {
+  text-decoration: none;
+  
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+}
+
+/* ==========================================
+   Navbar
+========================================== */
+
+.navbar {
+  background-color: #0d6efd;
+}
+
+.navbar .nav-link {
+  color: white !important;
+  transition: color 0.3s;
+}
+
+.navbar .nav-link:hover, .navbar .nav-link.active {
+  color: #ffc107 !important;
+}
+
+.navbar-brand img {
+  margin-right: 10px;
+}
+
+/* ==========================================
+   Hero Section
+========================================== */
+
+.hero {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  height: 700px;
+}
+
+.hero .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  
+} 
+
+.hero h1 {
+  margin-top: 200px;
+  z-index: 2;
+  position: relative;
+  text-align: center;
+}
+
+/* Smooth zoom animation for hero background */
+@keyframes zoomIn {
+  0% {transform: scale(1);}
+  50% {transform: scale(1.1);}
+  100% {transform: scale(1);}
+}
+
+.hero {
+  animation: zoomIn 15s ease-in-out infinite;
+}
+
+/* ==========================================
+   Sections
+========================================== */
+
+.section-royal {
+  background-color: #e9f2ff;
+}
+
+.section-light {
+  background-color: #ffffff;
+}
+
+.section-royal, .section-light {
+  padding: 60px 0;
+}
+
+/* ==========================================
+   Buttons
+========================================== */
+
+.btn-royal {
+  background-color: #0d6efd;
+  color: white;
+  border-radius: 50px;
+  padding: 10px 25px;
+  transition: all 0.3s;
+  border: none;
+}
+
+.btn-royal:hover {
+  background-color: #ffc107;
+  color: #0d6efd;
+}
+
+/* ==========================================
+   Cards, Program Boxes, Faculty & Students
+========================================== */
+
+.card, .program-box, .faculty-card, .student-box {
+  border-radius: 15px;
+  transition: transform 0.3s;
+}
+
+.card:hover, .program-box:hover, .faculty-card:hover, .student-box:hover {
+  transform: translateY(-5px);
+}
+
+.faculty-card img, .student-box img {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  display: block;
+  margin: 0 auto;
+  object-fit: cover;
+}
+
+/* ==========================================
+   Accordion
+========================================== */
+
+.accordion-button {
+  background-color: #0d6efd;
+  color: white;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: #ffc107;
+  color: #0d6efd;
+}
+
+/* ==========================================
+   Footer
+========================================== */
+
+ font-family: Arial, sans-serif;
+    
+    .hero-section {
+      background: linear-gradient(135deg, #1a73e8, #0d47a1);
+      color: white;
+      padding: 100px 20px;
+      text-align: center;
+    }
+    .footer-section {
+      background: linear-gradient(135deg, #0d47a1, #1a73e8);
+      color: white;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      transition: 0.3s;
+    }
+
+
+/* ==========================================
+   Multiple background images for home page
+========================================== */
+
+.hero.multibg {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.hero.multibg img.bg-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  z-index: 0;
+}
+
+.hero.multibg img.bg-slide.active {
+  opacity: 1;
+}
+
+/* ==========================================
+   Responsive
+========================================== */
+
+@media (max-width: 768px) {
+  .faculty-card img, .student-box img {
+    width: 120px;
+    height: 120px;
+  }
+  
+  .hero {
+    height: 250px !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .btn-royal {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+
+
